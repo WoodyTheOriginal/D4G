@@ -1,7 +1,7 @@
 <?php
     class Modele {
 
-        private $unPdo , $uneTable, $unId; 
+        private $unPdo , $uneTable = "eco_rules"; 
 
         public function   __construct ($serveur, $bdd, $user, $mdp)
         {
@@ -125,25 +125,11 @@
         }
         public function selectMembreOrder ($tab) {
                 $requete = "select nom, prenom, idmembre from membre order by nom,prenom ;";
-                /*$selectid = $this->unPdo->prepare ($requete); 
-                $selectid->execute (); 
-                $resultat = $selectid->fetch(); 
-                return $resultat;*/
                 $select = $this->unPdo->prepare ($requete); 
                 $select->execute (); 
                 return $select->fetchAll(); 
 
         }
-
-
-
-        /*public function selectCount () {
-                $requete = "select count(*) as nb from membre;";
-                $selectid = $this->unPdo->prepare ($requete); 
-                $selectid->execute (); 
-                $resultat = $selectid->fetch(); 
-                return $resultat;
-        }*/
 
         public function selectCount ()
         {
@@ -166,9 +152,6 @@
         public function selectIDMembre1 ($emailentree){
             $sql = 'select idmembre from membre where email ='.$emailentree.';' ;
             $req = $bdd->query($sql);
-
-            //$req = $bdd ->query("SELECT idmembre from membre where idmembre = '".$emailentree."'");
-            //$result = $req -> fetch(PDO::FECTH_OBJ);
             $req -> $idmembre;
             return $idmembre;
         }
@@ -178,7 +161,6 @@
         public function selectWhere ($tab)
         {
             if ($this->unPdo != null){
-                //construction du where 
                 $listeChamps = array(); 
                 $donnees =array();
                 foreach ($tab as $cle => $valeur) {
@@ -190,7 +172,7 @@
                 $requete = "select * from   ".$this->uneTable. " where ".$chaineChamps.";" ;
                 $select = $this->unPdo->prepare ($requete); 
                 $select->execute ($donnees); 
-                return $select->fetch(); //un seul résultat.
+                return $select->fetch(); 
             }
             else
             {
@@ -200,7 +182,6 @@
         public function update($tab, $where)
         {
             if ($this->unPdo != null){
-                //construction du where 
                 $listeChamps = array(); 
                 $donnees =array();
                 foreach ($where as $cle => $valeur) {
@@ -209,7 +190,6 @@
                 }
                 $chaineChamps = implode(" and ", $listeChamps); 
 
-                //construction des valeurs 
                 $listeValeurs = array ();
                 foreach ($tab as $cle => $valeur) {
                     $listeValeurs[] = $cle." = ".":".$cle ;
