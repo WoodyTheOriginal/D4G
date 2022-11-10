@@ -44,7 +44,7 @@
 					require_once("gestion_hebergement.php");
 				break;
 				case 6 :
-					require_once("gestion_specification.php");
+					require_once("gestion_specifications.php");
 				break;
 				case 7 :
 					require_once("gestion_strategie.php");

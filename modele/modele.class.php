@@ -46,7 +46,7 @@
             }
         }
         public function selectAllFiltre ($idLieuConcat) {
-                $requete = "select * from concert where idlieu"."= \"".$idLieuConcat."\" ;";
+                $requete = "select * from eco_rules where Famille_Origine"."= \"".$idLieuConcat."\" ;";
                 $select = $this->unPdo->prepare ($requete); 
                 $select->execute (); 
                 return $select->fetchAll();  
@@ -123,6 +123,15 @@
                 $resultat = $selectid->fetch(); 
                 return $resultat;
         }
+
+        public function selectFamille ($famille) {
+            $requete = "select * from eco_rules where Famille_Origine "."= \"".$famille."\" ;";
+            $selectid = $this->unPdo->prepare ($requete); 
+            $selectid->execute (); 
+            $resultat = $selectid->fetch(); 
+            return $resultat;
+    }
+
         public function selectMembreOrder ($tab) {
                 $requete = "select nom, prenom, idmembre from membre order by nom,prenom ;";
                 $select = $this->unPdo->prepare ($requete); 
@@ -172,7 +181,7 @@
                 $requete = "select * from   ".$this->uneTable. " where ".$chaineChamps.";" ;
                 $select = $this->unPdo->prepare ($requete); 
                 $select->execute ($donnees); 
-                return $select->fetch(); 
+                return $select->fetchAll(); 
             }
             else
             {

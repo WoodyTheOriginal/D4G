@@ -1,8 +1,8 @@
 <?php
 	$unControleur->setTable ("eco_rules");
-	$laPratique = null;
+	$unePratique = null;
 
-	$tab=array("*");
-	$lesPratiques = $unControleur->selectAll ($tab); 
+	$tab="ARCHITECTURE";
+	$lesPratiques = $unControleur->selectAllFiltre ($tab); 
 	require_once("vue/vue_bonnes_pratiques_mosaique.php");
 ?>

@@ -69,6 +69,12 @@
 			return $this->unModele->selectCount();
 		}
 
+		public function selectFamille ($famille) {
+			$lesResultats = $this->unModele->selectFamille($famille);
+
+			return $lesResultats;
+		}
+
 
 		public function selectOrder ($tab){
 			return $this->unModele->selectOrder($tab);
