@@ -65,6 +65,12 @@
 		return $lesResultats;
 		}
 
+		public function selectIDFiltre ($incontournable) {
+
+			$lesResultats = $this->unModele->selectIDFiltre($incontournable); 
+			return $lesResultats;
+		}
+
 		public function selectAllFiltrePanier ($idPanier) {
 
 		$lesResultats = $this->unModele->selectAllFiltre($idPanier); 

@@ -10,7 +10,6 @@ echo'<form class = "btPanier" action="index.php?page=9" method="post">
 */
 
 
-
 echo'<form action="index.php?page=9" method="post" class="btPanier">
   <div>
    <p> <input class="btPanierStyle" type="submit" name="viderPanier" value="Vider le panier"></p>
@@ -18,7 +17,6 @@ echo'<form action="index.php?page=9" method="post" class="btPanier">
   </div>
   
 </form>';
-
 
 
 if (!empty($_POST['viderPanier'])){

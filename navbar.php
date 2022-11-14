@@ -6,7 +6,7 @@
 			<li><a href="index.php?page=3"> Contenus </a></li>
 			<li><a href="index.php?page=4"> FrontEnd </a></li>
 			<li><a href="index.php?page=5"> Hebergement </a></li>
-			<li><a href="index.php?page=6"> Spécifiactions </a></li>
+			<li><a href="index.php?page=6"> Spécifications </a></li>
 			<li><a href="index.php?page=7"> Stratégie </a></li>
 			<li><a href="index.php?page=8"> UX/UI </a></li>
 			';

@@ -92,6 +92,17 @@
                 return null;
             }
         }
+
+        public function selectIDFiltre ($incontournable) {
+            if ($this->unPdo != null){
+                $requete = "select ID from eco_rules where incontournables"."= \"".$incontournable."\" ;";
+                $select = $this->unPdo->prepare ($requete); 
+                $select->execute (); 
+                return $select->fetchAll();  
+            }else {
+                return null;
+            }
+        }
                 public function selectAllFiltrePanier ($idPanier) {
             if ($this->unPdo != null){
                 $requete = "select * from eco_rules where ID"."= \"".$idPanier."\" ;";

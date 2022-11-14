@@ -10,7 +10,7 @@ if ( isset($_GET['idpratique'])){
 
 	$unControleur->setTable ("eco_rules");
 	$laPratique = null;
-	$familleOriginePratique ="spécifications";
+	$familleOriginePratique ="SPECIFICATIONS";
 	$lesPratiques = $unControleur->selectAllFiltre ($familleOriginePratique); 
 	require_once("vue/vue_mosaique_specifications.php");
 
