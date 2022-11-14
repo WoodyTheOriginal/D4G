@@ -45,7 +45,6 @@ $data = '';
 foreach ($lesPratiquesCarac as $unePratiqueCarac) {
 		$data = $data . implode('|', $unePratiqueCarac) . "\n";
 }
-echo $data;
 
 $filename = 'pratiques.txt';
 file_put_contents($filename, "");
