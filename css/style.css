@@ -137,14 +137,16 @@ li a:hover
 
 /*box*/
 .container_box{
-  display: flex;
-  flex-flow: wrap;
-  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
 }
 
 .box{
-  width: 33.33%;
-  margin-bottom: 15px;
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  padding: .5rem;
 }
 
 .boxDetail img{
