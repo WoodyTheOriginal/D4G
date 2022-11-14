@@ -44,24 +44,24 @@
 				<td>".$unePratique['RECOMMANDATION']." </td>
 				<td>".$unePratique['CRITERES']." </td>
 				<td>".$unePratique['JUSTIFICATIONS']." </td>
-				<td>".$unePratique['Etape Cycle de Vie']." </td>
-				<td>".$unePratique['TEST 1.1.1']." </td>
-				<td>".$unePratique['TEST 1.1.2']." </td>
+				<td>".$unePratique['EtapeCycledeVie']." </td>
+				<td>".$unePratique['TEST1.1.1']." </td>
+				<td>".$unePratique['TEST1.1.2']." </td>
 				<td>".$unePratique['CORRESPONDANCE']." </td>
 				<td>".$unePratique['Lien']." </td>
 				<td>".$unePratique['TYPE']." </td>
-				<td>".$unePratique['Difficulté de mise en oeuvre']." </td>
-				<td>".$unePratique['Objectif(s) ODD']." </td>
-				<td>".$unePratique['Tags Opérationnel']." </td>
+				<td>".$unePratique['DifficulteOeuvre']." </td>
+				<td>".$unePratique['ObjectifODD']." </td>
+				<td>".$unePratique['TagsOperationnel']." </td>
 				<td>".$unePratique['Indicateurs']." </td>
-				<td>".$unePratique['X Indicateurs']." </td>
-				<td>".$unePratique['Y Indicateurs']." </td>
-				<td>".$unePratique['Priorité']." </td>
-				<td>".$unePratique['Récurrence']." </td>
-				<td>".$unePratique['Use Case']." </td>
+				<td>".$unePratique['XIndicateurs']." </td>
+				<td>".$unePratique['YIndicateurs']." </td>
+				<td>".$unePratique['Priorite']." </td>
+				<td>".$unePratique['Recurrence']." </td>
+				<td>".$unePratique['UseCase']." </td>
 				<td>".$unePratique['Exemple']." </td>
 				<td>".$unePratique['Limites']." </td>
-				<td>".$unePratique['Automatisable Y / N']." </td>
+				<td>".$unePratique['Automatisable(Y/N)']." </td>
 				";
 
 			 

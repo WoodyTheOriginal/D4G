@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<title>Liste des Bonnes Pratiques</title>
-		<meta charset="utf-8">
+		<meta content=text/html charset="utf-8">
 		<link rel="icon" href="image/D4G_rogne.jpg"/>
   		<link rel="stylesheet" type="text/css" href="css/style.css">
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
