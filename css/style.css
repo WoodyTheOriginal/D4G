@@ -16,6 +16,12 @@ body{
   margin: auto;
   padding: 0;
   background: #f4f4f4;
+  width: 1200px;
+}
+
+html{
+  width: 100%;
+  margin: 0;
 }
 
 /*Navbar*/
