@@ -40,6 +40,7 @@ if (isset($_GET['action']) && isset($_GET['idpratique']))
 	}
 }
 $lesPratiques = $unControleur->selectAllBddPanier(); 
+
 $lesPratiquesCarac = $unControleur->selectCaracBddPanier();
 $data = '';
 foreach ($lesPratiquesCarac as $unePratiqueCarac) {
@@ -51,7 +52,6 @@ file_put_contents($filename, "");
 $fp = fopen($filename, 'a');
 fwrite($fp, $data);
 fclose($fp);
-
 
 require_once("vue/vue_bilan.php");
   ?>
