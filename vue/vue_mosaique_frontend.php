@@ -11,7 +11,7 @@ foreach ($lesPratiques as $unePratique) {
 				echo "<div class ='card-text'>";
 				echo $unePratique['CRITERES'];
 				echo "</div>";
-				echo "<a href='index.php?page=1&idpratique=" . $unePratique['ID'] . "'><div class='btn btn-primary'<button type='submit'>Ajouter</button></div></a>";
+				echo "<a href='index.php?page=4&idpratique=" . $unePratique['ID'] . "'><div class='btn btn-primary'<button type='submit'>Ajouter</button></div></a>";
 				echo "<a href='#'><div class ='boxInf'></div></a>
 			</div>
 		</div>";
