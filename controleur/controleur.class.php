@@ -52,6 +52,12 @@
 			return $lesResultats; 
 		}
 
+		public function selectCaracBddPanier ()
+		{
+			$lesResultats = $this->unModele->selectCaracBddPanier(); 
+			return $lesResultats; 
+		}		
+
 
 		public function selectAllFiltre ($nomFamilleOrigine) {
 

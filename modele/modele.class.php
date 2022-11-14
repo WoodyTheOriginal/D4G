@@ -59,6 +59,20 @@
             }
         }
 
+        public function selectCaracBddPanier () {
+            if ($this->unPdo != null){
+                $requete = "
+                        SELECT FamilleOrigine,ID,XIndicateurs,YIndicateurs,Indicateurs from eco_rules
+                        INNER JOIN panier
+                        ON panier.idArticlePanier = eco_rules.ID; ";
+                $select = $this->unPdo->prepare ($requete); 
+                $select->execute (); 
+                return $select->fetchAll(PDO::FETCH_ASSOC);  
+            } else {
+                return null; 
+            }
+        }        
+
         public function viderPanier () {
             if ($this->unPdo != null){
                 $requete = "truncate table panier;";

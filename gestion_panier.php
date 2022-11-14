@@ -14,14 +14,10 @@ echo'<form class = "btPanier" action="index.php?page=9" method="post">
 echo'<form action="index.php?page=9" method="post" class="btPanier">
   <div>
    <p> <input class="btPanierStyle" type="submit" name="viderPanier" value="Vider le panier"></p>
-   <p> <input class="btPanierStyle" type="submit" name="extrairePDF" value="Extraire en PDF"></p>
+   <p> <a href="gestion_pdf.php" class="btPanierStyle">Extraire en pdf</a></p>
   </div>
   
 </form>';
-
-
-
-
 
 
 
@@ -44,6 +40,20 @@ if (isset($_GET['action']) && isset($_GET['idpratique']))
 	}
 }
 $lesPratiques = $unControleur->selectAllBddPanier(); 
+$lesPratiquesCarac = $unControleur->selectCaracBddPanier();
+$data = '';
+foreach ($lesPratiquesCarac as $unePratiqueCarac) {
+		$data = $data . implode('|', $unePratiqueCarac) . "\n";
+}
+echo $data;
+
+$filename = 'pratiques.txt';
+file_put_contents($filename, "");
+$fp = fopen($filename, 'a');
+fwrite($fp, $data);
+fclose($fp);
+
+
 require_once("vue/vue_bilan.php");
   ?>
 

@@ -1,0 +1,6 @@
+CONTENUS|CTN-1.01|(X / Y ) * 100|Engagements NR ou RSE|ProjectMngr ;  Manager ; RSE/NR ; ITMngr
+CONTENUS|CTN-1.03|(X / Y ) * 100|Tags analysés|Dev ; Designer ;
+CONTENUS|CTN-2.C03|||
+CONTENUS|CTN-2.C03|||
+ARCHITECTURE|ARCH-1.C02|||
+ARCHITECTURE|ARCH-5.01|||Dev ; ProjectMngr ; ProductOwner ; ITMngr
