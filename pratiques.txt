@@ -1,3 +1,9 @@
+ARCHITECTURE|ARCH-1|||
+ARCHITECTURE|ARCH-1|||
+ARCHITECTURE|ARCH-1|||
 ARCHITECTURE|ARCH-1.01|||Dev ; ProjectMngr ; ProductOwner ; ITMngr
+ARCHITECTURE|ARCH-1.01|||Dev ; ProjectMngr ; ProductOwner ; ITMngr
+ARCHITECTURE|ARCH-1.01|||Dev ; ProjectMngr ; ProductOwner ; ITMngr
+ARCHITECTURE|ARCH-1.C01|||
 ARCHITECTURE|ARCH-1.C01|||
 ARCHITECTURE|ARCH-2.01|||Dev ; ProjectMngr ; ProductOwner ; ITMngr
