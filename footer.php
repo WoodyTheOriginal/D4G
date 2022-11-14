@@ -1,5 +1,5 @@
 <div id="footer">
-    <span>© Copyright 2020 - Tous droits réservés</span>
+    <span>© Copyright 2022 - Tous droits réservés</span>
     <a href="#" class="fa fa-facebook"></a>
     <a href="#" class="fa fa-twitter"></a>
     <a href="#" class="fa fa-linkedin"></a>

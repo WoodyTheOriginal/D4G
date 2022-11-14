@@ -1,7 +1,7 @@
 <?php
     class Modele {
 
-        private $unPdo , $uneTable = "eco_rules"; 
+        private $unPdo , $uneTable, $unId; 
 
         public function   __construct ($serveur, $bdd, $user, $mdp)
         {
@@ -45,12 +45,52 @@
                 return null; 
             }
         }
-        public function selectAllFiltre ($idLieuConcat) {
-                $requete = "select * from concert where idlieu"."= \"".$idLieuConcat."\" ;";
+        public function selectAllBddPanier () {
+            if ($this->unPdo != null){
+                $requete = "
+                        SELECT * from eco_rules
+                        INNER JOIN panier
+                        ON panier.idArticlePanier = eco_rules.ID; ";
                 $select = $this->unPdo->prepare ($requete); 
                 $select->execute (); 
                 return $select->fetchAll();  
+            } else {
+                return null; 
+            }
         }
+
+        public function viderPanier () {
+            if ($this->unPdo != null){
+                $requete = "truncate table panier;";
+                $select = $this->unPdo->prepare ($requete); 
+                $select->execute (); 
+            }
+        }
+
+
+        public function selectAllFiltre ($nomFamilleOrigine) {
+            if ($this->unPdo != null){
+                $requete = "select * from eco_rules where FamilleOrigine"."= \"".$nomFamilleOrigine."\" ;";
+                $select = $this->unPdo->prepare ($requete); 
+                $select->execute (); 
+                return $select->fetchAll();  
+            }else {
+                return null;
+            }
+        }
+                public function selectAllFiltrePanier ($idPanier) {
+            if ($this->unPdo != null){
+                $requete = "select * from eco_rules where ID"."= \"".$idPanier."\" ;";
+                $select = $this->unPdo->prepare ($requete); 
+                $select->execute (); 
+                return $select->fetchAll();  
+            }else {
+                return null;
+            }
+        }
+
+
+
         public function insert ($tab){
             //$tab est le $_POST du formulaire 
             if ($this->unPdo != null){
@@ -70,6 +110,13 @@
                 $insert->execute ($donnees); 
             }
         }
+
+               public function insertPanier ($Id){
+                $requete = "insert  into  panier  values(null,  ".$Id.") ; " ;
+                $insert = $this->unPdo->prepare ($requete); 
+                $insert->execute ($donnees); 
+            }
+        
 
         public function nbTuples ()
         {
@@ -117,7 +164,7 @@
                 return $resultat[0];
         }
         public function selectFiltre ($filtre) {
-                $requete = "select * from lieu where idlieu "."= \"".$filtre."\" ;";
+                $requete = "select * from eco_rules where CRITERE "."= \"".$filtre."\" ;";
                 $selectid = $this->unPdo->prepare ($requete); 
                 $selectid->execute (); 
                 $resultat = $selectid->fetch(); 

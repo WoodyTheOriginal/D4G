@@ -44,13 +44,16 @@
 					require_once("gestion_hebergement.php");
 				break;
 				case 6 :
-					require_once("gestion_specification.php");
+					require_once("gestion_specifications.php");
 				break;
 				case 7 :
 					require_once("gestion_strategie.php");
 				break;
 				case 8 :
 					require_once("gestion_ux_ui.php");
+				break;
+				case 9 :
+					require_once("gestion_panier.php");
 				break;
 
 			} 

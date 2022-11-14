@@ -41,6 +41,39 @@
 		}
 
 
+		public function viderPanier ()
+		{
+			$lesResultats = $this->unModele->viderPanier(); 
+		}
+
+		public function selectAllBddPanier ()
+		{
+			$lesResultats = $this->unModele->selectAllBddPanier(); 
+			return $lesResultats; 
+		}
+
+
+		public function selectAllFiltre ($nomFamilleOrigine) {
+
+		$lesResultats = $this->unModele->selectAllFiltre($nomFamilleOrigine); 
+		return $lesResultats;
+		}
+
+		public function selectAllFiltrePanier ($idPanier) {
+
+		$lesResultats = $this->unModele->selectAllFiltre($idPanier); 
+		return $lesResultats;
+		}
+
+
+		public function selectBackEnd ()
+		{
+			$lesResultats = $this->unModele->selectAll(); 
+			return $lesResultats; 
+		}
+		
+
+
 
 		public function selectMembreOrder ($tab) {
 			$this->unModele->selectMembreOrder($tab);
@@ -51,6 +84,13 @@
 			//on controle les données s'il ya lieu
 			$this->unModele->insert($tab);
 		}
+
+		public function insertPanier ($tab){
+			//on controle les données s'il ya lieu
+			$this->unModele->insertPanier($tab);
+		}
+
+
 		public function selectIdmembre ($emailentree) {
 			return $this->unModele->selectIdmembre($emailentree);
 		}
@@ -62,9 +102,7 @@
 		public function selectFiltre ($filtre){
 			return $this->unModele->selectFiltre($filtre);
 		}
-		public function selectAllFiltre ($idLieuConcat) {
-			return $this->unModele->selectAllFiltre($idLieuConcat);
-		}
+
 		public function selectCount (){
 			return $this->unModele->selectCount();
 		}

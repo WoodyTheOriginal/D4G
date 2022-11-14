@@ -1,8 +1,9 @@
 <center>
-<h2> Liste des bonnes Pratiques</h2>
+<h2>Panier</h2>
 
-<table class ="styled-table" border = "1">
-	<tr> <thead>
+<table class ="styled-table2" border = "1">
+	<tr>     
+		<thead>
 			<td> Famille Origine </td>
 			<td> ID </td> 
 			<td> Planet </td> 
@@ -19,19 +20,14 @@
 			<td> Type </td>
 			<td> Difficulté de mise en oeuvre </td>
 			<td> Objectif(s) ODD </td>
-			<td> Incontournable </td>
 			<td> Tags Opérationnels </td>
 			<td> Indicateurs </td>
 			<td> X Indicateur </td>
 			<td> Y Indicateur </td>
-			<td> Priorité </td>
-			<td> Récurrence </td>
-			<td> Use Case </td>
-			<td> Exemple </td>
-			<td> Limites </td>
-			<td> Automatisable Y/N </td>
-			<td> Automatisation </td>
-	</thead></tr>
+			<td> Retirer </td>
+		</thead>
+
+	</tr>
 
 	<?php 
 	foreach ($lesPratiques as $unePratique) {
@@ -56,12 +52,9 @@
 				<td>".$unePratique['Indicateurs']." </td>
 				<td>".$unePratique['X Indicateurs']." </td>
 				<td>".$unePratique['Y Indicateurs']." </td>
-				<td>".$unePratique['Priorité']." </td>
-				<td>".$unePratique['Récurrence']." </td>
-				<td>".$unePratique['Use Case']." </td>
-				<td>".$unePratique['Exemple']." </td>
-				<td>".$unePratique['Limites']." </td>
-				<td>".$unePratique['Automatisable Y / N']." </td>
+
+				<td><a href='index.php?page=9&action=sup&idpratique=".$unePratique['ID']."'>
+				<img src ='image/sup.png' height='30' witdh='30'> </a></td>
 				";
 
 			 

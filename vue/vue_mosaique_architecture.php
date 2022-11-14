@@ -1,4 +1,4 @@
-<center><h1>Les Bonnes pratiques</h1></center>
+<center><h1>Architecture</h1></center>
 <?php
 	echo "<div class ='container_box'>";
 	foreach ($lesPratiques as $unePratique) {
